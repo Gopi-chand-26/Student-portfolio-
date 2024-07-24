@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="gopi.jpg" alt="Your profile picture" class="profile">
+            <h1>Gopi Chand Bodapati</h1>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <nav>
+        <ul>
+            <li><a href="*about">ABOUT</a></li>
+            <li><a href="*projects">PROJECTS</a></li>
+            <li><a href="*skills">SKILLS</a></li>
+            <li><a href="*resume">RESUME</a></li>
+            <li><a href="*contacts">CONTACT</a></li>
+            
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me:</h2>
+            <p>Venkata Gopi Chand
+
+                I am currently pursuing a BTech in Computer Science and Engineering with a keen interest in exploring the dynamic field of technology. <br>
+                My hobbies include playing e-games and diving into the depths of literature through reading books. I am passionate about leveraging my programming skills to create innovative solutions and am eager to contribute to the ever-evolving world of technology.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education:</h2>
+            <center>
+            <table border="2" cellpadding="10" cellspacing="10">
+                <tr>
+                    
+                    <th>Institute Name</th>
+                    <th>Place</th>
+                    <th>Year</th>
+                </tr>
+                <tr>
+                    
+                    <td>SRM UNIVERSITY</td>
+                    <td>Amaravathi, AP</td>
+                    <td>In Progress</td>
+                </tr>
+                <tr>
+                    
+                    <td>SRI CHAITANYA JR COLLEGE</td>
+                    <td>Guntur, AP</td>
+                    <td>2020 - 2022</td>
+                </tr>
+                <tr>
+                    
+                    <td>DR.KKR's Gowtham high school</td>
+                    <td>Guntur, AP</td>
+                    <td>2013 - 2020</td>
+                </tr>
+            </table>
+            </center>
+        </div>
+    </section>
+
+  
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects:</h2>
+                <div class="work-container">
+
+
+                   <div class="work-info">
+                           <h4>Dictionary using data structures in c language  </h1>
+                            
+                   </div>
+                  
+                   
+           
+                       <div class="work-info">
+                           <h4>Book management system using c++ oops                        </h1>
+                               
+                           </div>
+                       
+                    
+           
+                   <div class="work-info">
+                           <h4>Student attandance system  using html css and Java script for front end and php and mysql for backend.</h1>
+                            
+                       </div>
+                   </div>
+               
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills:</h2>
+            <ul type="circle">
+                   
+                    <li>HTML, CSS, JavaScript, PHP,c,c++</li>
+                
+                <li>Data Structures and Algorithms, OOPS with C++, SQL.</li>
+                <li>Design and Analysis of Algorithms.</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section id="resume">
+        <div class="section-content">
+            <h2>Resume:</h2>
+            <p>Have a look! at my Resume.<br><br>
+                Just Click on 'Download Resume'.
+            </p>
+            <center>
+                <a href="MY_RESUME.pdf" class="download-button" target="_blank">Download</a>
+            </center>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <div class="section-content">
+            <h2>Contact:</h2>
+    <div class="social-media">
+        <ul>
+            <li><a href="#"><i class='bx bxl-github' ></i></a>Github</li>
+        
+        <li><a href= "#"target="_blank"><i class='bx-fw bx bxl-facebook'></i></a>Facebook</li>
+        <li><a href="https://www.linkedin.com/in/venkatagopichand "target="_blank"><i class='bx bxl-linkedin-square' ></i></a>Linkedin</li>
+        </ul>
+    </div>
+    </div>
+</section>
+
+    <footer>
+        <center><p>&copy; All Rights Reserved</p></center>
+    </footer>
+
+    <button class="top-button" id="top-button">top-button</button>
+
+    <script>
+        document.querySelectorAll('a[href^="*"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        const topButton = document.getElementById('top-button');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                topButton.style.display = 'block';
+            } else {
+                topButton.style.display = 'none';
+            }
+        });
+
+        topButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
